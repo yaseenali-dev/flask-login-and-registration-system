@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Share:wght@400;700&display=swap');
+:root{
+  --font-color: #1a1a1a;
+  --font-color-light: #838383;
+  --highlight-color: #c49cff;
+  --sec-color: #1d1d1d;
+  --link-active: #f9f9f9;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #f9f9f9;
+  color: var(--sec-color);
+  font-family: 'Share', cursive;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 8rem;
+  top: 0;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.noti{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5rem;
+  background: var(--highlight-color);
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.noti.red{
+    background: rgb(233, 147, 151)
+}
+
+.noti.red:hover, .noti.red:active, .noti.red:focus{
+    background: rgb(209, 111, 115)
+}
+
+.purple{ color: var(--highlight-color) }
+
+.noti .close{
+  position: absolute;
+  margin: 1rem;
+  right: 0;
+  transition: color 0.2s linear;
+}
+
+.close:hover{ color:var(--sec-color); }
+
+.noti:hover, .noti:focus, .noti:active{
+  background: #a275e6;
+  transition: background 0.2s linear;
+}
+
+.noti li{ list-style: none; }
+
+.logo a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.links a{
+  margin: 1rem;
+  text-decoration: none;
+  color: var(--font-color-light);
+}
+
+.links a:hover, .links nav a:active{
+  color: var(--link-active);
+}
+
+.msg-link{ color: white; }
+
+section{
+  display: grid;
+  grid-template-rows: 1fr 12fr;
+  height: 100vh;
+}
+
+.left{
+  background: var(--sec-color);
+  height: 8rem;
+}
+
+.right{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.green{ color: rgb(158, 221, 109) }
+
+.right form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right form h1{
+  margin: 1rem;
+}
+
+.right form input{
+  width: 20rem;
+  font-family: 'Share', cursive;
+  padding: 1rem;
+  margin: 0.4rem 0;
+  border-radius: 0.7rem;
+  border: none;
+}
+
+.error{
+  list-style: none;
+  color: rgb(246, 150, 150);
+}
+
+.right form a{
+  text-decoration: none;
+  align-self: flex-end;
+  color: var(--highlight-color);
+  margin: 1rem;
+}
+
+.right form a:hover{ color: #a481d9; }
+
+.right form input[type='submit']{
+  width: auto;
+  background: var(--sec-color);
+  color: #f6ffd5;
+  align-self: center;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  transition:  0.2s ease-in-out;
+}
+
+.right form input[type='checkbox']{
+  width: auto;
+}
+
+.flex-start{
+  margin: 0.8rem;
+  align-self: flex-start;
+}
+
+.right form input[type='submit']:active,
+
+.right form input[type='submit']:hover{
+  box-shadow: 0 1px 38px 2px rgba(185,139,254,0.40);
+  -webkit-box-shadow: 0 1px 38px 2px rgba(185,139,254,0.40);
+  -moz-box-shadow: 0 1px 38px 2px rgba(185,139,254,0.40);
+  transform: translatex(0.4rem);
+}
+
+@media only screen and (min-width: 800px){
+  section{
+    grid-template-columns: 0.6fr 2fr;
+  }
+
+  .left{ height: 100%; }
+
+  .right{ height: 100vh; }
+
+  .logo a{
+    font-size: 2.5rem;
+    color: #f9f9f9
+  }
+
+  .links a:hover, .links nav a:active{
+    color: black;
+  }
+
+  nav{ padding: 3rem 0; }
+
+  .active{ color: black; }
+}
+
+@media only screen and (max-height: 500px){
+  header{
+    width: 25%;
+    height: 100vh;
+  }
+  nav{
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    padding: 1rem 0;
+  }
+  .links a:hover, .links nav a:active{
+    color: var(--link-active);
+  }
+
+  .right form { padding-top: 1rem; }
+
+  .right form a{ margin: 0.2rem; }
+
+  .links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .right form input[type='submit']{
+    padding: 1rem;
+  }
+}

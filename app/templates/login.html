@@ -1,0 +1,28 @@
+{% from '_render_fileds.html' import render_field %}
+{% extends 'base.html' %}
+
+{% block titile %}Login{% endblock %}
+{% block body %}
+
+  <section>
+    <div class="left"></div>
+    <div class="right">
+      <form method="post">
+          <h1>Hi User :)</h1>
+          {{ form.hidden_tag() }}
+          {{ render_field(form.email) }}
+          {{ render_field(form.password) }}
+
+          <div class="flex-start">
+              {{ form.remember_me.label }}
+              {{ render_field(form.remember_me) }}
+          </div>
+
+          <a href="{{ url_for('auth_blueprint.forgot_password') }}">forgot password?</a>
+
+          <input type="submit" value="Go">
+      </form>
+    </div>
+  </section>
+
+{% endblock %}

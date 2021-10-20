@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block titile %}Admin_page{% endblock %}
+{% block body %}
+
+  <section>
+    <div class="left"></div>
+    <div class="right">
+      <h1>You are <span class="purple">ADMIN</span> {{ current_user.name }}</h1>
+    </div>
+  </section>
+
+{% endblock %}

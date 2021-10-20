@@ -1,0 +1,297 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Share:wght@400;700&display=swap');
+:root{
+  --font-color: #1a1a1a;
+  --font-color-light: #838383;
+  --highlight-color: #c49cff;
+  --sec-color: #1d1d1d;
+  --link-active: #f9f9f9;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body{
+  background: #f9f9f9;
+  color: var(--sec-color);
+  font-family: 'Share', cursive;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+header{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  width: 100%;
+  height: 8rem;
+  top: 0;
+}
+
+nav{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+.noti{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1.5rem;
+  background: var(--highlight-color);
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.noti.red{
+    background: rgb(233, 147, 151)
+}
+
+.noti.red:hover, .noti.red:active, .noti.red:focus{
+    background: rgb(209, 111, 115)
+}
+
+.purple{ color: var(--highlight-color) }
+
+.noti .close{
+  position: absolute;
+  margin: 1rem;
+  right: 0;
+  -webkit-transition: color 0.2s linear;
+  -o-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.close:hover{ color:var(--sec-color); }
+
+.noti:hover, .noti:focus, .noti:active{
+  background: #a275e6;
+  -webkit-transition: background 0.2s linear;
+  -o-transition: background 0.2s linear;
+  transition: background 0.2s linear;
+}
+
+.noti li{ list-style: none; }
+
+.logo a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.links a{
+  margin: 1rem;
+  text-decoration: none;
+  color: var(--font-color-light);
+}
+
+.links a:hover, .links nav a:active{
+  color: var(--link-active);
+}
+
+.msg-link{ color: white; }
+
+section{
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 12fr;
+  grid-template-rows: 1fr 12fr;
+  height: 100vh;
+}
+
+.left{
+  background: var(--sec-color);
+  height: 8rem;
+}
+
+.right{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.green{ color: rgb(158, 221, 109) }
+
+.right form{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right form h1{
+  margin: 1rem;
+}
+
+.right form input{
+  width: 20rem;
+  font-family: 'Share', cursive;
+  padding: 1rem;
+  margin: 0.4rem 0;
+  border-radius: 0.7rem;
+  border: none;
+}
+
+.error{
+  list-style: none;
+  color: rgb(246, 150, 150);
+}
+
+.right form a{
+  text-decoration: none;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: var(--highlight-color);
+  margin: 1rem;
+}
+
+.right form a:hover{ color: #a481d9; }
+
+.right form input[type='submit']{
+  width: auto;
+  background: var(--sec-color);
+  color: #f6ffd5;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  font-size: 1.1rem;
+  -webkit-transition:  0.2s ease-in-out;
+  -o-transition:  0.2s ease-in-out;
+  transition:  0.2s ease-in-out;
+}
+
+.right form input[type='checkbox']{
+  width: auto;
+}
+
+.flex-start{
+  margin: 0.8rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.right form input[type='submit']:active,
+
+.right form input[type='submit']:hover{
+  box-shadow: 0 1px 38px 2px rgba(185,139,254,0.40);
+  -webkit-box-shadow: 0 1px 38px 2px rgba(185,139,254,0.40);
+  -moz-box-shadow: 0 1px 38px 2px rgba(185,139,254,0.40);
+  -webkit-transform: translatex(0.4rem);
+      -ms-transform: translatex(0.4rem);
+          transform: translatex(0.4rem);
+}
+
+@media only screen and (min-width: 800px){
+  section{
+    -ms-grid-columns: 0.6fr 2fr;
+    grid-template-columns: 0.6fr 2fr;
+  }
+
+  .left{ height: 100%; }
+
+  .right{ height: 100vh; }
+
+  .logo a{
+    font-size: 2.5rem;
+    color: #f9f9f9
+  }
+
+  .links a:hover, .links nav a:active{
+    color: black;
+  }
+
+  nav{ padding: 3rem 0; }
+
+  .active{ color: black; }
+}
+
+@media only screen and (max-height: 500px){
+  header{
+    width: 25%;
+    height: 100vh;
+  }
+  nav{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1rem 0;
+  }
+  .links a:hover, .links nav a:active{
+    color: var(--link-active);
+  }
+
+  .right form { padding-top: 1rem; }
+
+  .right form a{ margin: 0.2rem; }
+
+  .links a{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .right form input[type='submit']{
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,23 @@
+{% from '_render_fileds.html' import render_field %}
+{% extends 'base.html' %}
+
+{% block titile %}Signup{% endblock %}
+
+{% block body %}
+  <section>
+    <div class="left"></div>
+    <div class="right">
+      <form method="post">
+          <h1>Hi New User :)</h1>
+          {{ form.hidden_tag() }}
+          {{ render_field(form.name) }}
+          {{ render_field(form.email) }}
+          {{ render_field(form.password) }}
+          {{ render_field(form.password_confirm) }}
+          <a href="{{ url_for('auth_blueprint.login') }}">Already have an account</a>
+          <input type="submit" value="Go">
+      </form>
+    </div>
+  </section>
+
+{% endblock %}

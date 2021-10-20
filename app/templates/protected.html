@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block titile %}Protected{% endblock %}
+{% block body %}
+
+  <section>
+    <div class="left"></div>
+    <div class="right">
+      <h1>You Are <span class="green">Authenticated </span>{{ current_user.name.upper() }} </h1>
+    </div>
+  </section>
+
+{% endblock %}

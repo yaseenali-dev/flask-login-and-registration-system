@@ -1,0 +1,6 @@
+{% macro render_field(field) %}
+    {{ field(**kwargs) }}
+    {% for error in field.errors %}
+        <li class="error">{{ error }}</li>
+    {% endfor %}
+{% endmacro %}
