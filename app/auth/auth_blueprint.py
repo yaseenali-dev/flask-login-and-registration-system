@@ -21,10 +21,12 @@ def login():
         user = User.query.filter_by(email=email).first()
         if user is not None and user.verify_password(password):
             login_user(user, remember=remember_me)
-            next = session["next"]
+            next = None
+            if 'next' in session:
+                next = session["next"]
             if next is None or not next.startswith("/"):
                 next = url_for(".protected")
-            session["next"] = ""
+            session.pop("next", None)
             return redirect(next)
         flash("wrong email or password", "error")
     return render_template("login.html", form=form)
