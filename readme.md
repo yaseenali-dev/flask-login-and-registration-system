@@ -47,8 +47,10 @@ export MAIL_PASSWORD=email_password
 
 now create DB:
 ```
-
 flask shell
+
+```
+```
 db.create_all()
 fake.g_user() #your can also generate users like this
 
