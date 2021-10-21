@@ -18,7 +18,7 @@ source venv\Scripts\activate
 
 ```
 
-pip insatll -r requirment.txt
+pip insatll -r requirments.txt
 
 ```
 Windows
