@@ -12,7 +12,7 @@ venv\Scripts\activate.bat
 Linux
 ```
 
-source venv\Scripts\activate
+source venv/Scripts/activate
 
 ```
 
