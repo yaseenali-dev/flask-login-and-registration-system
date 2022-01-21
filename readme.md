@@ -1,4 +1,4 @@
-# Flask Login System
+# Flask registration / login system
 
 This is a login system based on Flask. It has some features like email confirmation and reset password.
 
@@ -12,7 +12,7 @@ venv\Scripts\activate.bat
 Linux
 ```
 
-source venv/Scripts/activate
+source venv/bin/activate
 
 ```
 
@@ -53,6 +53,7 @@ flask shell
 ```
 db.create_all()
 fake.g_user() #your can also generate users like this
+#now exit flask shell
 
 ```
 
